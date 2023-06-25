@@ -14,7 +14,7 @@ public class FileProgram {
 		String fileContents = "";
 
 		try {
-			FileReader fileReader = new FileReader("./value.txt");
+			FileReader fileReader = new FileReader("value.txt");
 			Scanner myReader = new Scanner(fileReader);
 			while (myReader.hasNextLine()) {
 				fileContents = fileContents + myReader.nextLine();
@@ -32,7 +32,7 @@ public class FileProgram {
 		System.out.println("Cool.  Writing " + userEnteredValue + " to a value.txt");
 		try {
 			// Creates a FileWriter
-			FileWriter output = new FileWriter("./value.txt");
+			FileWriter output = new FileWriter("value.txt");
 
 			// Writes the string to the file
 			output.write(userEnteredValue);
@@ -44,7 +44,7 @@ public class FileProgram {
 		catch (Exception e) {
 			System.out.println("error saving file");
 		}
-
+		scanner.close();
 	}
 
 }
